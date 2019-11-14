@@ -24,11 +24,11 @@ public class ForgotPasswordServlet extends HttpServlet {
             AccountService as = new AccountService();
             String email = request.getParameter("email");
             String path = "/WEB-INF";
-            
+
             as.forgotPassword(email, getServletContext().getRealPath(path));
-            getServletContext().getRequestDispatcher("/WEB-INF/forgot.jsp").forward(request, response);
         } catch (Exception ex) {
             Logger.getLogger(ForgotPasswordServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+        getServletContext().getRequestDispatcher("/WEB-INF/forgot.jsp").forward(request, response);
     }
 }

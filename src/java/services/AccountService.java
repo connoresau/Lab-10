@@ -55,7 +55,7 @@ public class AccountService {
         
         String to = user.getEmail();
         String subject = "Home Inventory - Forgot Password";
-        String template = path + "/emailtemplates/login.html";
+        String template = path + "/emailtemplates/usersPassword.html";
         HashMap<String, String> tags = new HashMap<>();
         tags.put("firstname", user.getFname());
         tags.put("lastname", user.getLname());
